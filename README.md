@@ -21,7 +21,7 @@ By all means do not use the Node SMB server if you need a secure SMB/CIFS server
 You should set-up a dedicated virtual machine for running your SMB server. If you want extra safety you can put all your music on a read-only file system. Don’t forget to make backups. This SMB server won’t work with most other clients, including smbclient/fuse so if you want to be able to add more music later on, you can do this via SSH, NFS or you can go crazy and install Nextcloud. But remember you probably cannot use SMB to add music. This project is tested on Ubuntu 20 LTS, Ubuntu 22 LTS and Debian 11. Installing using automated installer Again use at your own risk, if you do not like running random scripts downloaded from the Internet, follow the manual installation steps. Run the following commands as root sudo su.
 
 ```
-wget https://raw.githubusercontent.com/daNutzzzzz/Sonos-SMB-Gateway/install-sonos-smb.sh -O /tmp/install-sonos-smb.sh
+wget https://raw.githubusercontent.com/daNutzzzzz/Sonos-SMB-Gateway/main/install-sonos-smb.sh -O /tmp/install-sonos-smb.sh
 chmod +x /tmp/install-sonos-smb.sh
 /tmp/install-sonos-smb.sh
 ```
@@ -85,7 +85,7 @@ chmod ugo+w /var/log/node-smb-server/
 mkdir /etc/node-smb-server
 cd /etc/node-smb-server
 
-wget https://raw.githubusercontent.com/daNutzzzzz/Sonos-SMB-Gateway/sonossmb.tar.gz -O /etc/node-smb-server/sonossmb.tar.gz
+wget https://raw.githubusercontent.com/daNutzzzzz/Sonos-SMB-Gateway/main/sonossmb.tar.gz -O /etc/node-smb-server/sonossmb.tar.gz
 tar -xvf sonossmb.tar.gz
 npm install
 
@@ -123,11 +123,11 @@ After making changes run killall node and run /usr/local/sbin/start-sonos-smb to
 
 In the Sonos S1 app go to Music Libary Setup and tap the Add Shared Music Folder option. Then use //ip-of-your-server/PUBLIC with the username guest and empty password. Here are some screenshots:
 
-![alt text](https://raw.githubusercontent.com/daNutzzzzz/Sonos-SMB-Gateway/images/Screenshot_1)
+![alt text](https://github.com/daNutzzzzz/Sonos-SMB-Gateway/blob/main/images/Screenshot_1.png)
 
-![alt text](https://raw.githubusercontent.com/daNutzzzzz/Sonos-SMB-Gateway/images/Screenshot_2)
+![alt text](https://github.com/daNutzzzzz/Sonos-SMB-Gateway/blob/main/images/Screenshot_2.png)
 
-![alt text](https://raw.githubusercontent.com/daNutzzzzz/Sonos-SMB-Gateway/images/Screenshot_3)
+![alt text](https://github.com/daNutzzzzz/Sonos-SMB-Gateway/blob/main/images/Screenshot_3.png)
 
 ## Troubleshooting
 There is a lot of logging that can help with debugging, you can run the following command and watch the output while hitting the play button on the Sonos controller, assuming you have a playlist with music coming from your share:

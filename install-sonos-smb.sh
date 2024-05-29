@@ -68,7 +68,7 @@ chmod ugo+w /var/log/node-smb-server/
 rm -Rf /etc/node-smb-server
 mkdir /etc/node-smb-server
 cd /etc/node-smb-server
-wget https://raw.githubusercontent.com/daNutzzzzz/Sonos-SMB-Gateway/sonossmb.tar.gz -O /etc/node-smb-server/sonossmb.tar.gz
+wget https://raw.githubusercontent.com/daNutzzzzz/Sonos-SMB-Gateway/main/sonossmb.tar.gz -O /etc/node-smb-server/sonossmb.tar.gz
 tar -xvf sonossmb.tar.gz
 npm install
 

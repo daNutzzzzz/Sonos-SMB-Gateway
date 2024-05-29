@@ -10,13 +10,14 @@ This SMB Server is unsecure I am focused on getting it to work on Sonos, you sho
 
 This work is released AS IS, WITHOUT WARRANTIES OF ANY KIND see the Apache License Version 2.0 included in the sources for more details. 
 
-## When should use this? If you are not able to get Samba to work on your Sonos S1 system. For Sonos S2 you should be able to use Samba, but I do not have S2 speakers so I do not test on them. For setting up Sonos S1 on Samba I have two working config examples:
- • Ubuntu 20, Debian 11 Samba 4.13 smb.conf example modify to fit your needs.
- • Ubuntu 22 Samba 4.15 smb.conf example modify to fit your needs.
+## When should use this? 
+If you are not able to get Samba to work on your Sonos S1 system. For Sonos S2 you should be able to use Samba, but I do not have S2 speakers so I do not test on them. For setting up Sonos S1 on Samba I have two working config examples:
+* Ubuntu 20, Debian 11 Samba 4.13 smb.conf example modify to fit your needs.
+* Ubuntu 22 Samba 4.15 smb.conf example modify to fit your needs.
 
 By all means do not use the Node SMB server if you need a secure SMB/CIFS server.
 
-## Installing
+## Installation
 You should set-up a dedicated virtual machine for running your SMB server. If you want extra safety you can put all your music on a read-only file system. Don’t forget to make backups. This SMB server won’t work with most other clients, including smbclient/fuse so if you want to be able to add more music later on, you can do this via SSH, NFS or you can go crazy and install Nextcloud. But remember you probably cannot use SMB to add music. This project is tested on Ubuntu 20 LTS, Ubuntu 22 LTS and Debian 11. Installing using automated installer Again use at your own risk, if you do not like running random scripts downloaded from the Internet, follow the manual installation steps. Run the following commands as root sudo su.
 
 ```
@@ -25,7 +26,7 @@ chmod +x /tmp/install-sonos-smb.sh
 /tmp/install-sonos-smb.sh
 ```
 
-## Manual installation steps
+### Manual installation steps
 Run the following commands as root sudo su. Note that lines that start with cat >> you have to copy multiple lines from cat >> … <<EOF … multiple lines to the final EOF. If you have trouble copy/pasting from the pdf, the README.md is also in the installation package.
 
 ```
